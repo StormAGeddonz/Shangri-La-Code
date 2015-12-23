@@ -3,7 +3,7 @@
 #define LIGHTING_FALLOFF 1 // type of falloff to use for lighting; 1 for circular, 2 for square
 #define LIGHTING_LAMBERTIAN 0 // use lambertian shading for light sources
 #define LIGHTING_HEIGHT 1 // height off the ground of light sources on the pseudo-z-axis, you should probably leave this alone
-#define LIGHTING_TRANSITIONS 0 // smooth, animated transitions, similar to TG station
+#define LIGHTING_TRANSITIONS 1 // smooth, animated transitions, similar to TG station
 #ifdef LIGHTING_TRANSITIONS
 #define LIGHTING_TRANSITION_SPEED (LIGHTING_INTERVAL - 2)
 #endif
