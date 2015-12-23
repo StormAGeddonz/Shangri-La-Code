@@ -1,8 +1,11 @@
+#define SPACEFIRE 200
+
+
 var/global/list/fire_colors = list("#FAA019", "#faa92f", "#fbb346", "#e19016", "#c88014")
 
 
 
-#define FIRECOLOR8 rgb(255,165,30)
+#define FIRECOLOR9 rgb(255,165,30)
 #define FIRECOLOR1 rgb(250,160,25) //fuck I really wish arrays were a thing in BYOND right now.
 #define FIRECOLOR2 rgb(249,159,24) //theres probably a better way to do this with math, but I am tired.
 #define FIRECOLOR3 rgb(248,158,22) //anyways, these are here to make the fire look different, but not so different that it looks bad.
@@ -24,6 +27,8 @@ var/global/list/fire_colors = list("#FAA019", "#faa92f", "#fbb346", "#e19016", "
 	dynamic_lighting = 0
 	luminosity = 1
 
+	light_color = "#FAA019"
+
 	temperature = SPACEFIRE
 	thermal_conductivity = FLOOR_HEAT_TRANSFER_COEFFICIENT //fire is hot, but still, no melting of stuff please.
 
@@ -35,7 +40,7 @@ var/global/list/fire_colors = list("#FAA019", "#faa92f", "#fbb346", "#e19016", "
 	. = ..()
 
 	if(!istype(src, /turf/space/transit))
-		color = pick(FIRECOLOR1, FIRECOLOR2, FIRECOLOR3, FIRECOLOR4, FIRECOLOR5, FIRECOLOR6, FIRECOLOR7, FIRECOLOR8)
+		color = pick(FIRECOLOR1, FIRECOLOR2, FIRECOLOR3, FIRECOLOR4, FIRECOLOR5, FIRECOLOR6, FIRECOLOR7, FIRECOLOR8, FIRECOLOR9)
 	update_starlight()
 
 /turf/space/Destroy()
