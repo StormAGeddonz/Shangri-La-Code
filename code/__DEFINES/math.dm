@@ -9,6 +9,7 @@
 #define T0C  273.15					// 0degC
 #define T20C 293.15					// 20degC
 #define TCMB 2.7					// -270.3degC
+#define SPACEFIRE 200
 
 #define Clamp(x, y, z) 	(x <= y ? y : (x >= z ? z : x))
 
